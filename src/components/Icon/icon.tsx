@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import classNames from 'classnames'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -23,7 +23,7 @@ export interface IconProps extends FontAwesomeIconProps {
  * import { Icon } from 'ddship-ui'
  * ~~~
  */
-export const Icon: React.FC<IconProps> = props => {
+export const Icon: FC<IconProps> = props => {
   // icon-primary
   const { className, theme, ...restProps } = props
   const classes = classNames('dd-icon', className, {

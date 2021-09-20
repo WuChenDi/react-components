@@ -2556,7 +2556,7 @@
 
 "@storybook/csf@0.0.1", "@storybook/csf@^0.0.1":
   version "0.0.1"
-  resolved "https://registry.nlark.com/@storybook/csf/download/@storybook/csf-0.0.1.tgz?cache=0&sync_timestamp=1631513512627&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40storybook%2Fcsf%2Fdownload%2F%40storybook%2Fcsf-0.0.1.tgz#95901507dc02f0bc6f9ac8ee1983e2fc5bb98ce6"
+  resolved "https://registry.nlark.com/@storybook/csf/download/@storybook/csf-0.0.1.tgz?cache=0&sync_timestamp=1632121110039&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40storybook%2Fcsf%2Fdownload%2F%40storybook%2Fcsf-0.0.1.tgz#95901507dc02f0bc6f9ac8ee1983e2fc5bb98ce6"
   integrity sha1-lZAVB9wC8LxvmsjuGYPi/Fu5jOY=
   dependencies:
     lodash "^4.17.15"
@@ -3265,9 +3265,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^17.0.0":
-  version "17.0.21"
-  resolved "https://registry.nlark.com/@types/react/download/@types/react-17.0.21.tgz#069c43177cd419afaab5ce26bb4e9056549f7ea6"
-  integrity sha1-BpxDF3zUGa+qtc4mu06QVlSffqY=
+  version "17.0.22"
+  resolved "https://registry.nlark.com/@types/react/download/@types/react-17.0.22.tgz#c80d1d0e87fe953bae3ab273bef451dea1a6291b"
+  integrity sha1-yA0dDof+lTuuOrJzvvRR3qGmKRs=
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -14708,7 +14708,7 @@ typedarray@^0.0.6:
 
 typescript@^4.1.2:
   version "4.4.3"
-  resolved "https://registry.nlark.com/typescript/download/typescript-4.4.3.tgz?cache=0&sync_timestamp=1632035709555&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
+  resolved "https://registry.nlark.com/typescript/download/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
   integrity sha1-vcVAfKorEJ79T4L+EwZW+XeikyQ=
 
 ua-parser-js@^0.7.18:

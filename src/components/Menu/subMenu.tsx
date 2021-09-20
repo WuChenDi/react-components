@@ -1,4 +1,4 @@
-import React, { useContext, useState, FunctionComponentElement } from 'react'
+import React, { FC, useContext, useState, FunctionComponentElement } from 'react'
 import classNames from 'classnames'
 import { MenuContext } from './menu'
 import { MenuItemProps } from './menuItem'
@@ -13,7 +13,7 @@ export interface SubMenuProps {
   className?: string
 }
 
-const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className }) => {
+const SubMenu: FC<SubMenuProps> = ({ index, title, children, className }) => {
   const context = useContext(MenuContext)
   const openedSubMenus = context.defaultOpenSubMenus as Array<string>
   const isOpend = index && context.mode === 'vertical' ? openedSubMenus.includes(index) : false

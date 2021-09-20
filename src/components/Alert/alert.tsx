@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import classnames from 'classnames'
 import Icon from '../Icon'
 import Transition from '../Transition'
@@ -28,7 +28,7 @@ export interface AlertProps {
  * import { Alert } from 'ddship'
  * ~~~
  */
-export const Alert: React.FC<AlertProps> = props => {
+export const Alert: FC<AlertProps> = props => {
   const [visible, setVisible] = useState(true)
   const { title, closable, type, customClose, onClose, children } = props
 
@@ -59,4 +59,5 @@ Alert.defaultProps = {
   closable: true,
   type: 'primary'
 }
+
 export default Alert
