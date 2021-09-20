@@ -1,33 +1,38 @@
 // config
-@import "variables";
+@import 'variables'; // 导入不需要 _,也不需要后缀名
 
-//layout
-@import "reboot";
+// layout
+@import 'reboot';
 
-//mixin
-@import "mixin";
+// mixin
+@import 'mixin';
 
 // animation
-@import "animation";
-// button
+@import 'animation';
 
-@import "../components/Button/style";
+// button
+@import '../components/Button/style';
+
+// alert
+@import '../components/Alert/style';
 
 // menu
+@import '../components/Menu/style';
 
-@import "../components/Menu/style";
+// tabs
+// @import '../components/Tabs/style';
 
 // icon
-@import "../components/Icon/style";
+@import '../components/Icon/style';
 
-// //input
-// @import "../components/Input/style";
+// // input
+// @import '../components/Input/style';
 
-// //auto-complete
-// @import "../components/AutoComplete/style";
+// // autoComplete
+// @import '../components/AutoComplete/style';
 
-// //upload
-// @import "../components/Upload/style";
+// // upload
+// @import '../components/Upload/style';
 
-// //progress
-// @import "../components/Progress/style";
+// // progress
+// @import '../components/Progress/style';
