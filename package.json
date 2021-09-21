@@ -2,14 +2,24 @@
   "name": "dd-react-components",
   "version": "0.1.0",
   "description": "React components library",
+  "author": "WuChenDi",
   "private": false,
-  "main": "build/index.js",
-  "module": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
   "keywords": [
     "Component",
     "UI",
     "React"
+  ],
+  "homepage": "https://github.com/WuChenDi/react-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WuChenDi/react-components"
+  },
+  "files": [
+    "dist"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -19,16 +29,27 @@
     "classnames": "^2.3.1",
     "react-transition-group": "^4.4.2"
   },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
   "scripts": {
-    "start": "yarn storybook",
-    "clean": "rimraf ./build",
-    "build": "yarn clean && yarn build-ts && yarn build-css",
+    "start": "npm run storybook",
+    "clean": "rimraf ./dist",
+    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
+    "build": "npm run clean && npm run build-ts && npm run build-css",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./build/index.css",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "test": "react-scripts test",
+    "test:nowatch": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:nowatch && npm run lint"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -74,6 +95,8 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-transition-group": "^4.4.3",
+    "cross-env": "^7.0.3",
+    "husky": "^7.0.2",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-docgen-typescript-loader": "^3.7.2",

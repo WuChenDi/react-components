@@ -1,9 +1,10 @@
 import React  from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { Upload, UploadFile } from './upload'
+import { Upload } from './upload'
 // import Button from '../Button/button'
 import Icon from '../Icon/icon'
+
 // 上传前检测文件大小  直接返回布尔值
 // const checkFileSize = (file: File) => {
 //   if (Math.round(file.size / 1024) > 50) {
@@ -28,7 +29,7 @@ import Icon from '../Icon/icon'
 const SimpleUpload = () => {
   return (
     <Upload
-      action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+      action='https://www.mocky.io/v2/5cc8019d300000980a055e76'
       onChange={action('changed')}
       // defaultFileList={defaultFileList}
       onRemove={action('removed')}
@@ -40,12 +41,11 @@ const SimpleUpload = () => {
       // multiple
       drag
     >
-      <Icon icon="upload" size="5x" theme="secondary" />
-      <br/>
+      <Icon icon='upload' size='5x' theme='secondary' />
+      <br />
       <p>Drag file over to upload</p>
     </Upload>
   )
 }
 
-storiesOf('Upload component', module)
-  .add('Upload', SimpleUpload)
+storiesOf('Upload component', module).add('Upload', SimpleUpload)
