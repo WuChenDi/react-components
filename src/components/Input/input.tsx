@@ -4,7 +4,6 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import Icon from '../Icon/icon'
 
 export type InputSize = 'lg' | 'sm'
-export type ButtonType = 'primary' | 'default' | 'danger' | 'link'
 
 // Omit 忽略接口中的一直值
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size'> {
