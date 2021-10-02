@@ -41,8 +41,7 @@ const SimpleComplete = () => {
       .then(res => res.json())
       .then(({ items }) => {
         console.log(items)
-        const formatItems = items.slice(0, 10).map((item: any) => ({ value: item.login, ...item }))
-        return formatItems
+        return items.slice(0, 10).map((item: any) => ({ value: item.login, ...item }))
       })
   }
 
@@ -65,4 +64,4 @@ const SimpleComplete = () => {
   )
 }
 
-storiesOf('AutoComplete Component', module).add('AutoComplete', SimpleComplete)
+storiesOf('AutoComplete', module).add('AutoComplete', SimpleComplete)

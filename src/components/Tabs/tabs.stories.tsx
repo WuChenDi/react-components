@@ -37,7 +37,7 @@ export const tabsWithCustom = () => (
   </Tabs>
 )
 
-storiesOf('Tabs Component', module)
+storiesOf('Tabs', module)
   .add('Tabs', defaultTabs)
   .add('选项卡样式的 Tabs', tabsWithOutline)
   .add('自定义选项卡样式 Tabs', tabsWithCustom)

@@ -48,4 +48,4 @@ const SimpleUpload = () => {
   )
 }
 
-storiesOf('Upload component', module).add('Upload', SimpleUpload)
+storiesOf('Upload', module).add('Upload', SimpleUpload)

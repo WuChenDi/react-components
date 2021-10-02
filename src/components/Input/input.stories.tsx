@@ -41,7 +41,7 @@ const inputWithPad = () => (
   </>
 )
 
-storiesOf('Input component', module)
+storiesOf('Input', module)
   .add('Input', defaultInput)
   .add('被禁用的 Input', inputWithDisabled)
   .add('带图标的 Input', inputWithIcon)

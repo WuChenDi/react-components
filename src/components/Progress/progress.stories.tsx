@@ -14,7 +14,7 @@ const strokeHeightProcess = () => (
   <Progress percent={50} strokeHeight={50} />
 )
 
-storiesOf('Process Component', module)
+storiesOf('Process', module)
   .add('Process', defaultProcess)
   .add('不显示百分比', withTextProcess)
   .add('不同的高度', strokeHeightProcess)
