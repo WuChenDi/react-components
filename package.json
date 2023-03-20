@@ -2,13 +2,14 @@
   "name": "dd-react-components",
   "version": "0.1.0",
   "description": "React components library",
-  "author": "WuChenDi",
+  "author": "wudi",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "keywords": [
+    "storybook",
     "Component",
     "UI",
     "React"
@@ -21,89 +22,44 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.15",
-    "axios": "^0.21.4",
-    "classnames": "^2.3.1",
-    "react-transition-group": "^4.4.2"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
-  },
   "scripts": {
-    "start": "npm run storybook",
-    "clean": "rimraf ./dist",
-    "lint": "eslint --ext js,ts,tsx src --max-warnings 5",
-    "build": "npm run clean && npm run build-ts && npm run build-css",
-    "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "test": "react-scripts test",
-    "test:nowatch": "cross-env CI=true react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6009",
+    "build-storybook": "storybook build -o out",
+    "prettier:write": "prettier --write \".storybook/**/*.ts\" \"src/**/*.{js,ts,tsx}\""
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:nowatch && npm run lint"
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-essentials": "7.0.0-rc.5",
     "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.3.8",
-    "@storybook/node-logger": "^6.3.8",
-    "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.8",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-transition-group": "^4.4.3",
-    "cross-env": "^7.0.3",
-    "husky": "^7.0.2",
-    "node-sass": "^7.0.0",
-    "react": "^17.0.2",
-    "react-docgen-typescript-loader": "^3.7.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.1.2"
+    "@storybook/addon-interactions": "7.0.0-rc.5",
+    "@storybook/addon-links": "7.0.0-rc.5",
+    "@storybook/blocks": "7.0.0-rc.5",
+    "@storybook/nextjs": "7.0.0-rc.5",
+    "@storybook/react": "7.0.0-rc.5",
+    "@storybook/testing-library": "0.0.14-next.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/node": "18.15.3",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-storybook": "^0.6.11",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.5",
+    "sass": "^1.59.3",
+    "storybook": "7.0.0-rc.5",
+    "typescript": "^5.0.2"
   }
 }
