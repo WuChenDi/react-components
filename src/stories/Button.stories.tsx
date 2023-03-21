@@ -1,35 +1,30 @@
-import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
+import { StoryObj, Meta } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import { Button } from './Button'
 
-const meta: ComponentMeta<typeof Button> = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button
 }
 export default meta
 
-export const Primary: ComponentStoryObj<typeof Button> = {
+export const DefaultButton: StoryObj<typeof Button> = {
   args: {
-    primary: true,
-    label: 'Button'
+    children: 'default button',
+    onClick: action('clicked')
   }
 }
 
-export const Secondary: ComponentStoryObj<typeof Button> = {
+export const ButtonWithSize: StoryObj<typeof Button> = {
   args: {
-    label: 'Button'
+    children: 'large button',
+    size: 'lg'
   }
 }
 
-export const Large: ComponentStoryObj<typeof Button> = {
+export const ButtonWithType: StoryObj<typeof Button> = {
   args: {
-    size: 'large',
-    label: 'Button'
-  }
-}
-
-export const Small: ComponentStoryObj<typeof Button> = {
-  args: {
-    size: 'small',
-    label: 'Button'
+    children: 'primary button',
+    btnType: 'primary'
   }
 }

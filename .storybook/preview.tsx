@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Preview } from '@storybook/react'
+import '../src/styles/index.scss'
 
 const wrapperStyle: React.CSSProperties = {
   padding: '20px 40px'
