@@ -1,8 +1,11 @@
 // config
-@import 'variables'; // 导入不需要 _,也不需要后缀名
+@import 'variables';
 
 // layout
 @import 'reboot';
+
+// functions
+@import 'functions';
 
 // mixin
 @import 'mixin';
@@ -11,28 +14,4 @@
 @import 'animation';
 
 // button
-@import '../components/Button/style';
-
-// alert
-@import '../components/Alert/style';
-
-// menu
-@import '../components/Menu/style';
-
-// tabs
-@import '../components/Tabs/style';
-
-// icon
-@import '../components/Icon/style';
-
-// input
-@import '../components/Input/style';
-
-// autoComplete
-@import '../components/AutoComplete/style';
-
-// upload
-@import '../components/Upload/style';
-
-// progress
-@import '../components/Progress/style';
+@import '../components/Button/Button.module';
