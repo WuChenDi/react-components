@@ -1,27 +1,32 @@
 {
   "name": "dd-react-components",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "React components library",
-  "author": "wudi",
-  "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "license": "MIT",
+  "files": [
+    "build"
+  ],
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WuChenDi/react-components.git"
+  },
   "keywords": [
     "storybook",
     "Component",
     "UI",
     "React"
   ],
-  "homepage": "https://github.com/WuChenDi/react-components",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WuChenDi/react-components"
+  "author": "wudi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WuChenDi/react-components/issues"
   },
-  "files": [
-    "dist"
-  ],
+  "homepage": "https://github.com/WuChenDi/react-components",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,6 +34,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6009",
     "build-storybook": "storybook build -o out",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build-css": "sass ./src/styles/index.scss ./build/index.css",
     "prettier:write": "prettier --write \".storybook/**/*.ts\" \"src/**/*.{js,ts,tsx}\""
   },
   "dependencies": {
@@ -38,6 +45,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
     "@storybook/addon-essentials": "7.0.0-rc.5",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-interactions": "7.0.0-rc.5",
@@ -51,6 +59,7 @@
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "cross-env": "^7.0.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "eslint-config-prettier": "^8.7.0",
@@ -61,5 +70,9 @@
     "sass": "^1.59.3",
     "storybook": "7.0.0-rc.5",
     "typescript": "^5.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   }
 }
