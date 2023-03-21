@@ -1,6 +1,10 @@
-import React, { FC, ButtonHTMLAttributes, ComponentPropsWithoutRef, AnchorHTMLAttributes } from 'react'
+import React, {
+  FC,
+  ButtonHTMLAttributes,
+  ComponentPropsWithoutRef,
+  AnchorHTMLAttributes
+} from 'react'
 import classNames from 'classnames'
-// import './Button.module.scss'
 
 export type ButtonSize = 'lg' | 'sm'
 export type ButtonType = 'primary' | 'default' | 'danger' | 'link'
@@ -44,8 +48,9 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
  * import { Button } from 'ddship'
  * ~~~
  */
-export const Button: FC<ButtonProps> = props => {
-  const { btnType, className, disabled, size, children, href, ...restProps } = props
+export const Button: FC<ButtonProps> = (props) => {
+  const { btnType, className, disabled, size, children, href, ...restProps } =
+    props
 
   // btn, btn-lg, btn-primary
   const classes = classNames('btn', className, {
