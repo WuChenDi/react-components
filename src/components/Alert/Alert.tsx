@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react'
 import classnames from 'classnames'
 // import Icon from '../Icon'
 import Transition from '../Transition'
+import Icon from '../Icon'
 
 export type AlertType = 'success' | 'primary' | 'warning' | 'danger' | 'default'
 
@@ -28,12 +29,13 @@ export interface AlertProps {
  * import { Alert } from 'ddship'
  * ~~~
  */
-export const Alert: FC<AlertProps> = props => {
+export const Alert: FC<AlertProps> = (props) => {
   const [visible, setVisible] = useState(true)
   const { title, closable, type, customClose, onClose, children } = props
 
-  // const customCloseP = customClose || <Icon icon='times' className='window-close' size='lg' />
-  const customCloseP = customClose || <>Icon</>
+  const customCloseP = customClose || (
+    <Icon icon='times' className='window-close' size='lg' />
+  )
   const classes = classnames('alert', {
     [`alert-${type}`]: type
   })
