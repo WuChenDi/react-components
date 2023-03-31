@@ -26,7 +26,7 @@ export interface AlertProps {
  * ### 引用方法
  *
  * ~~~js
- * import { Alert } from 'ddship'
+ * import { Alert } from 'dd-react-components'
  * ~~~
  */
 export const Alert: FC<AlertProps> = (props) => {

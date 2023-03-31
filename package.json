@@ -1,10 +1,11 @@
 {
   "name": "dd-react-components",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React components library",
   "files": [
     "build"
   ],
+  "type": "module",
   "main": "build/index.js",
   "module": "build/index.js",
   "types": "build/index.d.ts",
@@ -36,6 +37,7 @@
     "build-storybook": "storybook build -o out",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-css": "sass ./src/styles/index.scss ./build/index.css",
+    "prepublishOnly": "npm run build-ts && npm run build-css",
     "prettier:write": "prettier --write \".storybook/**/*.ts\" \"src/**/*.{js,ts,tsx}\""
   },
   "dependencies": {
