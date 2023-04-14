@@ -32,9 +32,9 @@ export interface IconProps extends FontAwesomeIconProps {
  *
  * ### 引用方法
  *
- * ~~~js
+ * ```js
  * import { Icon } from 'dd-react-components'
- * ~~~
+ * ```
  */
 export const Icon: FC<IconProps> = (props) => {
   // icon-primary

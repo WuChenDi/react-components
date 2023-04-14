@@ -5,32 +5,35 @@ import Icon from '../Icon'
 
 const meta: Meta<typeof Button> = {
   title: 'Example/Button',
-  component: Button
+  component: Button,
+  tags: ['autodocs']
 }
 export default meta
 
-export const DefaultButton: StoryObj<typeof Button> = {
+type Story = StoryObj<typeof Button>
+
+export const DefaultButton: Story = {
   args: {
     children: 'default button',
     onClick: action('clicked')
   }
 }
 
-export const ButtonWithSize: StoryObj<typeof Button> = {
+export const ButtonWithSize: Story = {
   args: {
     children: 'large button',
     size: 'lg'
   }
 }
 
-export const ButtonWithType: StoryObj<typeof Button> = {
+export const ButtonWithType: Story = {
   args: {
     children: 'primary button',
     btnType: 'primary'
   }
 }
 
-export const ButtonIcon: StoryObj<typeof Button> = {
+export const ButtonIcon: Story = {
   args: {
     btnType: 'primary',
     disabled: false,
